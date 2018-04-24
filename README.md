@@ -29,8 +29,9 @@ First of all, make a mapbox account.
 [<img width="981" alt="Mapbox Signup" src="img/screenshot-1.png">](https://www.mapbox.com/signup/)
 
 When you make an account, it should give you your access token. Save this and keep it handy! We will need it later.
+pk.eyJ1IjoiYmlnc2hhcXNrcnJyYSIsImEiOiJjamdlMGpram8zZHIwMnFzMGt5cDhlNmliIn0.IVgRjak-gVaxVcT8OqwnNg
 
-Select the `Web Maps SDK` and then select `Use the Mapbox CDN`. You'll be given some lines of code to add to your index.html! They should look like this: 
+Select the `Web Maps SDK` and then select `Use the Mapbox CDN`. You'll be given some lines of code to add to your index.html! They should look like this:
 
 ```html
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
@@ -46,7 +47,7 @@ Remember those two lines of code? Now open up index.html and add them to the `<h
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
 ```
 
-Add the following code to the body, right under the `<h2>` tag. 
+Add the following code to the body, right under the `<h2>` tag.
 
 ```html
 <div id='map' style='width: 400px; height: 300px;'></div>
@@ -66,7 +67,7 @@ Fantastic, now you have a map embedded in the webpage!
 [<img width="981" alt="Mapbox Signup" src="img/map.png">]()
 
 ## Adding a Custom Marker
-The MapPlot reads GeoJSON data to create markers on the map. Let's provide our map with some location data for Tim's Pizza Place. 
+The MapPlot reads GeoJSON data to create markers on the map. Let's provide our map with some location data for Tim's Pizza Place.
 
 Add in the following JSON information between the map code you just pasted in and the closing ``` </script> ```. We've already dropped a pin on the first location, but you should pick a second location of your liking. Find GPS coordinates using Google maps. (hint: you may have to reverse the coordinates).
 
@@ -109,7 +110,7 @@ Then, add styling for your marker to you ```style.css```:
   cursor: pointer;
 }
 ```
-Finally, lets include the javascript to read the JSON and display the marker icons. Make sure to add this code after your GeoJSON data and before the ```</script>``` tag. 
+Finally, lets include the javascript to read the JSON and display the marker icons. Make sure to add this code after your GeoJSON data and before the ```</script>``` tag.
 ```
 // add markers to map
 geojson.features.forEach(function(marker) {
@@ -131,7 +132,7 @@ geojson.features.forEach(function(marker) {
 
 Popups are a useful way to display marker specific information on your MapBox. We're going to add some to our markers!
 
-First, lets do some styling for our popups in ```style.css```: 
+First, lets do some styling for our popups in ```style.css```:
 
 ```
 .mapboxgl-popup {
@@ -186,7 +187,7 @@ Follow the same process to edit the water.
 
 Now we're going to change the fonts!
 
-Click the filter layers buttom at the top of the layers list, filter by value, and select fonts. Choose Opens Sans Semibold in the resutling list and then select it in the layer list, change the value to Open Sans Bold. 
+Click the filter layers buttom at the top of the layers list, filter by value, and select fonts. Choose Opens Sans Semibold in the resutling list and then select it in the layer list, change the value to Open Sans Bold.
 
 Select the Text Transform button and chagne the fonts to "All Uppercase"
 
@@ -194,7 +195,7 @@ Select the Text Transform button and chagne the fonts to "All Uppercase"
 
 ### Exporting your custom style
 
-When you have all the changes you want to make to your style, select "Publish Style" in the upper right corner. 
+When you have all the changes you want to make to your style, select "Publish Style" in the upper right corner.
 
 Go to mapbox.com/studio/styles and grab the URL for your style. Make sure you change it to public access.
 
@@ -218,7 +219,7 @@ NOTE: We're assuming you already have surge installed, if not you will have to t
 * [X] Attach marker-aware popups
 * [X] Create a custom style and apply it to a map
 
-## Really liked this tutorial? Want to learn more? Here are some extra credit ideas: 
+## Really liked this tutorial? Want to learn more? Here are some extra credit ideas:
 * Add an image as the background of your map in the Style editor (see the image in the `Create a Custom Style` section)
 * Add a store locator to let users browse all locations of Tim's Pizza (hint [here](https://www.mapbox.com/help/building-a-store-locator/))
 
